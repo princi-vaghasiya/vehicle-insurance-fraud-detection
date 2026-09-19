@@ -1,0 +1,19 @@
+# Virtual Environments
+venv/
+backend/venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node / Frontend dependencies (if any)
+node_modules/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGuard AI - Premium Vehicle Insurance Fraud Detection</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AutoGuard AI uses state-of-the-art machine-learning models to analyze vehicle insurance claims, helping claims adjusters detect potential fraud with high accuracy and speed.">
+    <meta name="keywords" content="vehicle insurance, fraud detection, machine learning, AI claim analysis, insurance tech, AutoGuard">
+    <meta name="author" content="AutoGuard AI Team">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Global CSS stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- 1. Opening Intro Screen Container -->
+    <div id="intro-screen-container"></div>
+
+    <!-- 2. Main Application Container (Visible after intro animation) -->
+    <div id="main-app-container" class="hidden">
+        
+        <!-- Header & Navbar Navigation -->
+        <header id="header-container"></header>
+
+        <!-- Main Content Area -->
+        <main>
+            <!-- Hero CTA Section -->
+            <section id="hero-container"></section>
+
+            <!-- Claim Analysis Wizard Form Section -->
+            <section id="claim-analysis" class="section-container claim-section-active">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <span class="badge">AI Model Inference</span>
+                        <h2 class="section-title">Claim Fraud Analysis Form</h2>
+                        <p class="section-subtitle">Provide details for the 24 clean dataset features to run predictive evaluation.</p>
+                    </div>
+                    
+                    <div class="form-layout-wrapper">
+                        <!-- Progress Wizard Indicator (Sticky Sidebar on Desktop) -->
+                        <aside id="progress-indicator-container"></aside>
+                        
+                        <!-- Claim Form Wizard Container -->
+                        <div id="claim-form-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Simulated ML Prediction Result Section -->
+            <section id="prediction-result-container" class="section-container bg-cream hidden"></section>
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" class="section-container"></section>
+
+            <!-- About AutoGuard AI Section -->
+            <section id="about" class="section-container bg-cream"></section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer-container"></footer>
+        
+    </div>
+
+    <!-- Simulation Console / Development Toolbar (Sticky Bottom) -->
+    <div id="dev-toolbar-container">
+        <div class="dev-toolbar">
+            <div class="dev-toolbar-title">
+                <span class="pulse-dot"></span>
+                <strong>Demo Simulation Console</strong>
+            </div>
+            <div class="dev-toolbar-controls">
+                <span class="dev-label">Next Prediction Outcome:</span>
+                <button id="btn-toggle-fraud" class="btn-dev-toggle active-green" data-outcome="safe">
+                    ✓ Mock Safe (Low Risk)
+                </button>
+                <button id="btn-toggle-safe" class="btn-dev-toggle" data-outcome="fraud">
+                    ⚠ Mock Fraud (High Risk)
+                </button>
+            </div>
+            <div class="dev-toolbar-info">
+                <span>Model Features: <strong>24 Inputs</strong></span>
+                <span class="separator">|</span>
+                <span>API State: <strong class="text-orange">Placeholder Ready</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Modular Application Javascript -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "autoguard-ai-frontend",
+  "version": "1.0.0",
+  "description": "Premium frontend interface for AutoGuard AI Vehicle Insurance Fraud Detection project",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -c-1"
+  },
+  "keywords": [
+    "insurance",
+    "fraud-detection",
+    "machine-learning",
+    "frontend"
+  ],
+  "author": "AutoGuard AI",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
