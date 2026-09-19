@@ -105,7 +105,7 @@ class App {
      */
     executePrediction(formData) {
         // Output clean log of features for developer debugging
-        console.log('--- TRANSMITTING PAYLOAD TO API http://127.0.0.1:5000/predict ---');
+        console.log('--- TRANSMITTING PAYLOAD TO API https://vehicle-insurance-fraud-detection-gdp7.onrender.com/predict ---');
         console.table(formData);
         
         this.predictClaim(formData)
@@ -120,11 +120,11 @@ class App {
 
     /**
      * Real Flask Backend API Connector
-     * Sends the 24 claim fields to http://127.0.0.1:5000/predict
+     * Sends the 24 claim fields to https://vehicle-insurance-fraud-detection-gdp7.onrender.com/predict
      */
     async predictClaim(claimPayload) {
         try {
-            const response = await fetch('http://127.0.0.1:5000/predict', {
+            const response = await fetch('https://vehicle-insurance-fraud-detection-gdp7.onrender.com/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

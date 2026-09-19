@@ -112,7 +112,7 @@ export default class PredictionResult {
                         </div>
                         
                         <div class="result-disclaimer">
-                            <strong>Note on ML evaluation:</strong> Real-time decision tree classification processed by Python Flask service at <code>http://127.0.0.1:5000/predict</code>.
+                            <strong>Note on ML evaluation:</strong> Real-time decision tree classification processed by Python Flask service at <code>https://vehicle-insurance-fraud-detection-gdp7.onrender.com/predict</code>.
                         </div>
                         
                         <button class="btn-primary" id="btn-analyze-another">
