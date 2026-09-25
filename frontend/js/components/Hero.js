@@ -18,9 +18,9 @@ export default class Hero {
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 18c-3.75-1-6.5-4.81-6.5-8.5V8.3l6.5-3.61 6.5 3.61v3.59c0 3.69-2.75 7.5-6.5 8.5z"/>
                         </svg>
-                        Trustworthy Insurance intelligence
+                        <span>Trustworthy Insurance intelligence</span>
                     </div>
-                    <h1 class="hero-title">Vehicle Insurance<br>Fraud Detection</h1>
+                    <h1 class="hero-title">Vehicle Insurance <br class="desktop-br">Fraud Detection</h1>
                     <p class="hero-subtitle">
                         Analyze insurance claims with an AI-powered machine-learning model. Input details across the 24 standard dataset parameters to calculate instant risk assessment.
                     </p>
