@@ -1551,7 +1551,137 @@ body {
     100% { opacity: 1; }
 }
 
+/* Model Performance Card */
+.model-performance-card {
+    background-color: var(--white);
+    border: 1px solid var(--soft-beige);
+    border-radius: var(--border-radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+}
+
+.model-performance-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--medium-brown);
+}
+
+.model-perf-header {
+    margin-bottom: 20px;
+}
+
+.model-perf-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--cream);
+    color: var(--rich-brown);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 20px;
+    border: 1px solid var(--soft-beige);
+    margin-bottom: 8px;
+}
+
+.model-perf-title {
+    font-size: 1.25rem;
+    color: var(--deep-brown);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.model-perf-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.model-perf-metric {
+    background-color: var(--cream);
+    border: 1px solid var(--soft-beige);
+    border-radius: var(--border-radius-md);
+    padding: 14px 10px;
+    text-align: center;
+    transition: var(--transition-fast);
+}
+
+.model-perf-metric.highlight {
+    background-color: var(--safe-green-light);
+    border-color: var(--safe-green);
+}
+
+.model-perf-val {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--deep-brown);
+    line-height: 1.1;
+}
+
+.model-perf-metric.highlight .model-perf-val {
+    color: var(--safe-green);
+}
+
+.model-perf-lbl {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--light-text);
+    font-weight: 600;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.model-perf-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.model-perf-desc {
+    font-size: 0.88rem;
+    color: var(--light-text);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.model-perf-meta {
+    font-size: 0.85rem;
+    color: var(--dark-text);
+    background-color: var(--cream);
+    padding: 10px 14px;
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--rich-brown);
+}
+
+.model-perf-params {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.model-perf-params code {
+    background-color: var(--cream);
+    color: var(--deep-brown);
+    border: 1px solid var(--soft-beige);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
 /* 16. RESPONSIVE MEDIA QUERIES */
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 /* Tablet Viewports */
 @media (max-width: 1024px) {
@@ -1569,12 +1699,13 @@ body {
         flex-direction: row;
         overflow-x: auto;
         padding-bottom: 12px;
-        gap: 16px;
+        gap: 12px;
+        -webkit-overflow-scrolling: touch;
     }
     
     .progress-step-item {
         flex-shrink: 0;
-        padding: 6px 12px;
+        padding: 8px 12px;
     }
     
     .hero-layout {
@@ -1592,14 +1723,19 @@ body {
 
 /* Mobile Viewports */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .section-container {
-        padding: 48px 0;
+        padding: 44px 0;
     }
     
     .intro-content {
         flex-direction: column;
         text-align: center;
         gap: 24px;
+        padding: 24px 16px;
     }
     
     .intro-left img {
@@ -1661,11 +1797,12 @@ body {
     }
     
     .hero-title {
-        font-size: 2.25rem;
+        font-size: 2.15rem;
     }
     
     .hero-subtitle {
         margin: 0 auto 24px auto;
+        font-size: 1rem;
     }
     
     .hero-actions {
@@ -1677,10 +1814,12 @@ body {
     .hero-actions .btn-secondary {
         width: 100%;
         justify-content: center;
+        padding: 14px 24px;
     }
     
     .form-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
     
     .form-field-full {
@@ -1688,16 +1827,35 @@ body {
     }
     
     .form-card {
-        padding: 24px;
+        padding: 20px 16px;
+    }
+
+    .form-step-title {
+        font-size: 1.3rem;
+    }
+
+    .form-navigation-actions {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .btn-form-prev,
+    .btn-form-next {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        font-size: 0.95rem;
     }
     
     .review-data-list {
         grid-template-columns: 1fr;
-        padding: 16px;
+        padding: 12px;
+        gap: 10px;
     }
     
     .pipeline-layout {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .about-layout {
@@ -1706,20 +1864,39 @@ body {
     }
     
     .about-metrics {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .metric-item {
+        padding: 12px 8px;
+    }
+
+    .metric-number {
+        font-size: 1.4rem;
     }
     
     .result-card {
-        padding: 24px;
+        padding: 20px 16px;
+    }
+
+    .result-gauge-box {
+        padding: 14px 20px;
+        width: 100%;
     }
     
     .result-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .result-card .btn-primary {
+        width: 100%;
+        justify-content: center;
     }
     
     .dev-toolbar {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
         text-align: center;
     }
     
@@ -1733,6 +1910,36 @@ body {
     }
     
     body {
-        padding-bottom: 120px; /* More space for stacked dev toolbar */
+        padding-bottom: 110px;
     }
 }
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+    .about-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .model-perf-metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .hero-title {
+        font-size: 1.85rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .input-control, .select-control {
+        font-size: 16px; /* Prevents auto-zoom on mobile safari */
+    }
+
+    .segmented-label {
+        font-size: 0.8rem;
+        padding: 8px 6px;
+    }
+}
+
